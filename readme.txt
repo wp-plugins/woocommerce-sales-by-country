@@ -37,6 +37,11 @@ WooCommerce Sales by Country simply adds a report page to display country specif
 4. Go to WooCommerce report page and that's it.
 
 
+== Screenshots ==
+
+1. Sales report by country
+
+
 == Changelog ==
 
 = v1.0.0 (25.09.2013) =
