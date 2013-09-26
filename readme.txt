@@ -1,9 +1,10 @@
 === WooCommerce Sales by Country ===
-Contributors: m.h.mithu
+Contributors: M.H.Mithu
+Plugin Site: http://mithu.me/
 Tags: woocommerce, report, sales, country
 Requires at least: 3.5
 Tested up to: 3.6.1
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -43,6 +44,9 @@ WooCommerce Sales by Country simply adds a report page to display country specif
 
 
 == Changelog ==
+
+= v1.0.1 (26.09.2013) =
+* Added - Currency symbol to total sales amount.
 
 = v1.0.0 (25.09.2013) =
 * First release.

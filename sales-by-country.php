@@ -1,15 +1,15 @@
 <?php
-/*
-Plugin Name: WooCommerce Sales by Country
-Plugin URI: http://mithu.me/
-Description: Adds a report page to display country specific product sales report.
-Version: 1.0.0
-Author: m.h.mithu
-Author URI: http://mithu.me/
-Requires at least: 3.5
-Tested up to: 3.6.1
-
-    Copyright 2012-2013 M.H.Mithu (Email: mail@mithu.me)
+/**
+* Plugin Name: WooCommerce Sales by Country
+* Plugin URI: http://mithu.me/
+* Description: Adds a report page to display country specific product sales report.
+* Version: 1.0.1
+* Author: M.H.Mithu
+* Author URI: http://mithu.me/
+* License: GNU General Public License v2.0 (or newer)
+* License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+/*  Copyright (C) 2013 M.H.Mithu (Email: mail@mithu.me)
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -117,7 +117,7 @@ if( in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_
             //if(in_array($value['country_name'], $country->countries)) { ?>
             <tr>
                 <td><?php echo $country->countries[$value['country_name']]; ?></td>
-                <td><?php echo $value['sale_total']; ?></td>
+                <td><?php echo get_woocommerce_currency_symbol().$value['sale_total']; ?></td>
             </tr>
     <?php
             // }
