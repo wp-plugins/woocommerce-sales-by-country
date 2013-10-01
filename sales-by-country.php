@@ -3,7 +3,7 @@
 * Plugin Name: WooCommerce Sales by Country
 * Plugin URI: http://mithu.me/
 * Description: Adds a report page to display country specific product sales report.
-* Version: 1.0.1
+* Version: 1.0.2
 * Author: M.H.Mithu
 * Author URI: http://mithu.me/
 * License: GNU General Public License v2.0 (or newer)
@@ -76,7 +76,7 @@ if( in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_
                 AND   order_items.order_item_type = 'line_item'
                 AND   order_item_meta.meta_key    = '_line_total'
                 AND   country.meta_key            = '_billing_country'
-                AND   term.slug IN ('completed')
+                AND   term.slug IN ('completed','processing','on-hold')
                 AND   post_date > '" . date('Y-m-d', $start_date ) . "'
                 AND   post_date < '" . date('Y-m-d', strtotime('+1 day', $end_date ) ) . "'
                 GROUP BY country.meta_value";
@@ -88,7 +88,7 @@ if( in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_
 
     ?>
         <form method="post" action="">
-            <p><label for="from"><?php _e('From:', 'woocommerce'); ?></label><input type="text" name="start_date" id="from" readonly="readonly" value="<?php echo esc_attr( date('Y-m-d', $start_date) ); ?>" /><label for="to"><?php _e('To:', 'woocommerce'); ?></label> <input type="text" name="end_date" id="to" readonly="readonly" value="<?php echo esc_attr( date('Y-m-d', $end_date) ); ?>" /><input type="submit" class="button" value="<?php _e('Show', 'woocommerce'); ?>" /></p>
+            <p><label for="from"><?php _e('From:'); ?></label><input type="text" name="start_date" id="from" readonly="readonly" value="<?php echo esc_attr( date('Y-m-d', $start_date) ); ?>" /><label for="to"><?php _e('To:'); ?></label> <input type="text" name="end_date" id="to" readonly="readonly" value="<?php echo esc_attr( date('Y-m-d', $end_date) ); ?>" /><input type="submit" class="button" value="<?php _e('Show'); ?>" /></p>
         </form>
 
         <script type="text/javascript">
