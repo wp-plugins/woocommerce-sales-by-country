@@ -1,5 +1,5 @@
 === WooCommerce Sales by Country ===
-Contributors: M.H.Mithu
+Contributors: mitcmt
 Plugin Site: http://mithu.me/
 Tags: woocommerce, report, sales, country
 Requires at least: 3.5
